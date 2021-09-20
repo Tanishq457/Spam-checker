@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>SMS Spam check</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+	<div class=" h-60 w-full flex items-center justify-center bg-teal-lightest font-sans">
+
+		<div class="bg-white shadow-md rounded px-8 pt-2 pb-2 mb-2">
+			<div class="block text-gray-800 font-bold md:flex md:items-center mb-6">
+
+				{% if prediction==0 %}
+				<h1>Prediction: The given message is NOT spam .</h1>
+				{% elif prediction==1 %}
+				<h1>Prediction: The given message IS spam.</h1>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

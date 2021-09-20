@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SMS Spam checker</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Title -->
+    <div class=" h-60 w-full flex items-center justify-center bg-teal-lightest font-sans">
+
+        <div class="bg-white shadow-md rounded px-8 pt-2 pb-2 mb-2">
+            <div class="block text-gray-800 font-bold md:flex md:items-center mb-6">
+                Project 1
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Student Details -->
+    <div class=" h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
+
+        <div class="bg-white shadow-md rounded px-8 pt-2 pb-2 mb-2">
+
+            <!-- Name-->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        Name
+                    </label>
+                </div>
+                <div class="md:w-1/3">
+                </div>
+                <div class="md:w-3/5">
+                    <label name="name" class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        Tanishq Bhalla
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Roll No. -->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        Roll No.
+                    </label>
+                </div>
+                <div class="md:w-1/3">
+                </div>
+                <div class="md:w-3/5">
+                    <label name="name" class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        101803705
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Group -->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        Group
+                    </label>
+                </div>
+                <div class="md:w-1/3">
+                </div>
+                <div class="md:w-3/5">
+                    <label name="name" class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        COE 16
+                    </label>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Input Area -->
+
+    <div class="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans rounded-2xl">
+
+        <div class="bg-white shadow rounded px-8 pt-2 pb-2 mb-0 ">
+            <form action="{{ url_for('check') }}" method="POST">
+
+                <!-- Text Area -->
+                <textarea class='message-box border-2 rounded-2xl pl-2' name="message" rows="15" cols="40"
+                    placeholder="Enter message"></textarea><br />
+
+                <!-- Submit button -->
+
+                <div class="md:flex md:items-center pt-0">
+                    <div class="md:w-1/3"></div>
+                    <div class="md:w-2/3">
+
+                        <input type="submit" value="Submit"
+                            class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
